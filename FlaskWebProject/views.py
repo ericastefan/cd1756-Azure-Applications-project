@@ -102,7 +102,7 @@ def authorized():
         user = User.query.filter_by(username="admin").first()
         login_user(user)
         _save_cache(cache)
-         app.logger.warning("admin logged successfully.")
+        app.logger.warning("admin logged successfully.")
     return redirect(url_for('home'))
 
 @app.route('/logout')
